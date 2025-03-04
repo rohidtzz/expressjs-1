@@ -30,7 +30,7 @@ app.use(express.json())
 app.use("/api/v1/users", usersRoutes)
 
 app.get('/', (req, res) => {
-    res.json({h:"asd"})
+    res.send("Selamat datang di express.js")
 });
 
 
