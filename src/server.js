@@ -8,13 +8,11 @@ dotenv.config()
 const app = express();
 const port = process.env.PORT || '3000';
 
-// Koneksikan ke database
 (async () => {
     try {
       await db.authenticate();
       console.log("✅ Database Connected!");
-  
-      // Sinkronisasi model dengan database
+
       await db.sync();
       console.log("✅ Tabel siap digunakan!");
     } catch (error) {
